@@ -5,12 +5,22 @@
 *Informática Gráfica - Universidad de Zaragoza, curso 2020-21*
 
 ## Descripción
-Photon Mapper basado en código previo proporcionado por los profesores de la asignatura.
+Este repositorio contiene un Photon Mapper que permite realizar el renderizado de escenas captando
+mediante la emisión de una determinada cantidad de fotones desde las fuentes de lus. Acto seguido
+un ray tracer genera rayos desde la cámara para poder realizar la estimación de la radiancia de 
+cada pixel. Como punto de partida se toma el código proporcionado por los profesores de la 
+asignatura de Informática Gráfica.
 
 En el [informe](doc/photonmapper_report.pdf) se explica en detalle la implementación del programa.
 
+En las siguientes imágenes pueden verse ejemplos de escenas renderizadas con nuestro algoritmo.
+
 |![question 2.1](doc/Q21_rt_ID.png)|![question 2.3](doc/Q23_n_100000_k_1000.png)|
 |:---:|:---:|
+
+Adicionalmente se implementó la posibilidad de añadir medios participativos(niebla) a las 
+escenas.vNo obstante esta funcionalidad no se logró programar a tiempo, por lo que esta 
+imcompleta. En las siguientes imágenes pueden verse ejemplos de escenas con presencia de niebla.
 
 |![foggy diffuse](doc/ej_foggy_200.png)|![foggy dielectric](doc/ej_foggy_dielc_50.png)|
 |:---:|:---:|
@@ -31,6 +41,8 @@ cd Ux
 El resultado es una imagen en formato .hdr (Radiance HDR).
 
 ### Lista de opciones
+El Photon Mapper admite varios argumentos para realizar el renderizado de las escenas.
+La goemetría de las mismas ha de ser hardcodeada en el fichero principal del programa. 
 Los valores por defecto se muestran entre paréntesis.
 	
 	-film-name FILE            Nombre del fichero de salida (name_file).
